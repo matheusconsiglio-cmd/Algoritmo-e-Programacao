@@ -170,14 +170,14 @@ Var
    i, posicaoEncontrada: inteiro
 Inicio
    posicaoEncontrada <- 0
+   i <- 1
 
-   se quantidade > 0 entao
-      para i de 1 ate quantidade faca
-         se entregas[i].codigo = codigoBuscado entao
-            posicaoEncontrada <- i
-         fimse
-      fimpara
-   fimse
+   enquanto (i <= quantidade) e (posicaoEncontrada = 0) faca
+      se entregas[i].codigo = codigoBuscado entao
+         posicaoEncontrada <- i
+      fimse
+      i <- i + 1
+   fimenquanto
 
    retorne posicaoEncontrada
 Fimfuncao
